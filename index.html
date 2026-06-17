@@ -250,8 +250,20 @@
 </div>
 
 <script>
-  // ── PASTE YOUR ANTHROPIC API KEY HERE ──
-  const API_KEY = "YOUR_API_KEY_HERE";
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // 🔑 SETUP INSTRUCTIONS:
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // To use this EHS Assistant, you need to add your Anthropic API key below.
+  // 
+  // 1. Get your API key from: https://console.anthropic.com/account/keys
+  // 2. Copy your API key (it looks like: sk-ant-v0-...)
+  // 3. Replace "YOUR_API_KEY_HERE" on line 211 with your actual API key
+  // 4. Example: const API_KEY = "sk-ant-v0-abc123...";
+  //
+  // 🚀 That's it! Your EHS Assistant is now ready to use!
+  // ═══════════════════════════════════════════════════════════════════════════════
+
+  const API_KEY = "YOUR_API_KEY_HERE"; // ← PASTE YOUR ANTHROPIC API KEY HERE
 
   const SYSTEM_PROMPT = `You are a specialized EHS (Environment, Health, and Safety) assistant. Your ONLY role is to answer questions related to:
 - Environmental compliance and regulations (ISO 14001, EPA standards, waste management)
@@ -352,7 +364,7 @@ Format your answers clearly. Use bullet points or numbered lists when helpful. B
     const text = input.value.trim();
     
     if (API_KEY === "YOUR_API_KEY_HERE") {
-        alert("Please add your Anthropic API Key to the HTML file's script tag.");
+        alert("⚠️ Setup Required!\n\nPlease add your Anthropic API key to line 211 of the HTML file:\n\nconst API_KEY = \"sk-ant-...\"\n\nGet your free API key at: https://console.anthropic.com/account/keys");
         return;
     }
     
